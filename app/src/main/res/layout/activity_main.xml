@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context="com.example.ahmed150236.quizapp.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/score_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="68dp"
+            android:text="Score : "
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp">
+
+            <LinearLayout
+                android:id="@+id/linear_Quiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:id="@+id/linear_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/Question"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/question_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            style="@style/questions"
+                            android:text="Which data type value is returned by all transcendental math functions?" />
+                    </LinearLayout>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/anser_background">
+
+                        <Button
+                            android:id="@+id/button"
+                            style="@style/buttons_ansers"
+                            android:layout_width="130dp"
+                            android:layout_height="80dp"
+                            android:layout_column="1"
+                            android:layout_margin="15dp"
+                            android:onClick="button1_anser"
+                            android:text="int" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            style="@style/buttons_ansers"
+                            android:layout_width="130dp"
+                            android:layout_height="80dp"
+                            android:layout_column="2"
+                            android:layout_margin="15dp"
+                            android:onClick="button2_anser"
+                            android:text="float" />
+
+                        <Button
+                            android:id="@+id/button3"
+                            style="@style/buttons_ansers"
+                            android:layout_width="130dp"
+                            android:layout_height="80dp"
+                            android:layout_column="1"
+                            android:layout_margin="15dp"
+                            android:layout_row="2"
+                            android:onClick="button3_anser"
+                            android:text="double" />
+
+                        <Button
+                            android:id="@+id/button4"
+                            style="@style/buttons_ansers"
+                            android:layout_width="130dp"
+                            android:layout_height="80dp"
+                            android:layout_column="2"
+                            android:layout_margin="15dp"
+                            android:layout_row="2"
+                            android:onClick="button4_anser"
+                            android:padding="10dp"
+                            android:text="long" />
+                    </GridLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/question_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            style="@style/questions"
+                            android:text="GUI stands for Graphical User Interface?" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/question"
+                        android:background="@drawable/anser_background"
+                        android:padding="10dp">
+
+                        <RadioButton
+                            android:id="@+id/answer1_true"
+                            style="@style/radio_button"
+                            android:layout_marginTop="25dp"
+                            android:text="true" />
+
+                        <RadioButton
+                            android:id="@+id/answer2_false"
+                            style="@style/radio_button"
+                            android:layout_marginTop="25dp"
+                            android:text="faulse" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/question_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            style="@style/questions"
+                            android:text="What is the range of short data type in Java?" />
+                    </LinearLayout>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/anser_background">
+
+                        <Button
+                            android:id="@+id/button5"
+                            style="@style/buttons_ansers"
+                            android:layout_width="130dp"
+                            android:layout_height="80dp"
+                            android:layout_column="1"
+                            android:layout_margin="15dp"
+                            android:text="-128 to 127" />
+
+                        <Button
+                            android:id="@+id/button6"
+                            style="@style/buttons_ansers"
+                            android:layout_width="130dp"
+                            android:layout_height="80dp"
+                            android:layout_column="2"
+                            android:layout_margin="15dp"
+                            android:text="-32768 to 32767" />
+
+                        <Button
+                            android:id="@+id/button7"
+                            style="@style/buttons_ansers"
+                            android:layout_width="130dp"
+                            android:layout_height="80dp"
+                            android:layout_column="1"
+                            android:layout_margin="15dp"
+                            android:layout_row="2"
+                            android:text="-2147483648 to 2147483647" />
+
+                        <Button
+                            android:id="@+id/button8"
+                            style="@style/buttons_ansers"
+                            android:layout_width="130dp"
+                            android:layout_height="80dp"
+                            android:layout_column="2"
+                            android:layout_margin="15dp"
+                            android:layout_row="2"
+                            android:text="None of the mentioned" />
+                    </GridLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/question_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            style="@style/questions"
+                            android:text="What is the full form of CPU?" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/anser_background"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@android:color/white" />
+
+                        <Button
+                            android:id="@+id/button_quest4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/ic_navigate_next_white_24dp"
+                            android:tint="#FFFFFF" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/question_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            style="@style/questions"
+                            android:text="What's Package is imported by default into java programming" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radio_group2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/question"
+                        android:background="@drawable/anser_background"
+                        android:padding="10dp">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            style="@style/radio_button"
+                            android:layout_marginTop="25dp"
+                            android:text="java.lang" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            style="@style/radio_button"
+                            android:layout_marginTop="25dp"
+                            android:text="java.awt.font"
+                         />
+
+                        <RadioButton
+                            android:id="@+id/radioButton3"
+                            style="@style/radio_button"
+                            android:layout_marginTop="25dp"
+                            android:text="java.awt" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/question_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            style="@style/questions"
+                            android:text="What is the programming languages from the above answer?(choose all the right)" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/anser_background"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkBox"
+                            style="@style/checkBox"
+                            android:text="C++" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox2"
+                            style="@style/checkBox"
+                            android:text="Flip Flop" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox3"
+                            style="@style/checkBox"
+                            android:text="Java" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox4"
+                            style="@style/checkBox"
+                            android:text="Python" />
+
+                        <Button
+                            android:id="@+id/button_question6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/ic_navigate_next_white_24dp"
+                            android:tint="#FFFFFF" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/submit"
+                        style="@style/buttons_ansers"
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:text="Submit"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/final_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/counter"
+            android:layout_centerHorizontal="true"
+            android:text="Your Score: "
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="false"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="108dp"
+            android:background="@drawable/counter_back"
+            android:gravity="center"
+            android:text="0"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/start"
+        android:onClick="Start"
+        android:visibility="visible" />
+
+</RelativeLayout>
